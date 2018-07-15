@@ -24,3 +24,5 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/.attach_pid7311
+/bin/**
