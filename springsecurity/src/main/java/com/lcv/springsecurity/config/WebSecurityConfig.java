@@ -2,18 +2,18 @@ package com.lcv.springsecurity.config;
 
 import com.lcv.springsecurity.filters.JWTAuthenticationFilter;
 import com.lcv.springsecurity.filters.JWTLoginFilter;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.authentication.configurers.provisioning.InMemoryUserDetailsManagerConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
@@ -40,18 +40,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        String password = "123";
+        System.out.println("PASSWORD:" + passwordEncoder().encode("123"));
+        auth.inMemoryAuthentication().withUser("admin").password(passwordEncoder().encode("admin")).roles("ADMIN");
+        auth.jdbcAuthentication().dataSource(InstanceDatasource.dataSource())
+                .usersByUsernameQuery("SELECT sLogin as username, sPassword as password, enabled from [User] WHERE sLogin = ?")
+                .authoritiesByUsernameQuery("SELECT sLogin AS username, nRole_Id AS role FROM [User] WHERE sLogin = ?");
+    }
 
-        String encrytedPassword = this.passwordEncoder().encode(password);
-        System.out.println("Encoded password of 123=" + encrytedPassword);
 
-        InMemoryUserDetailsManagerConfigurer<AuthenticationManagerBuilder>
-                mngConfig = auth.inMemoryAuthentication();
+}
 
-        UserDetails u1 = User.withUsername("tom").password(encrytedPassword).roles("USER").build();
-        UserDetails u2 = User.withUsername("jerry").password(encrytedPassword).roles("USER").build();
+class InstanceDatasource {
 
-        mngConfig.withUser(u1);
-        mngConfig.withUser(u2);
+    static DataSource dataSource() {
+        return DataSourceBuilder.create()
+                .username("sa")
+                .password("123qwe!@#QWE")
+                .url("jdbc:sqlserver://localhost;databaseName=iMuzik")
+                .driverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver")
+                .build();
     }
 }
+

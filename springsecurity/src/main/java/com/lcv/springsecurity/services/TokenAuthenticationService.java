@@ -13,7 +13,7 @@ import java.util.Date;
 
 @Slf4j
 public class TokenAuthenticationService {
-    static final long EXPIRATIONTIME = 864_000_000; // 10 days
+    static final long EXPIRATIONTIME = 864_000_000;
 
     static final String SECRET = "ThisIsASecret";
 
@@ -31,7 +31,6 @@ public class TokenAuthenticationService {
 
     public static Authentication getAuthentication(HttpServletRequest request) {
         String token = request.getHeader(HEADER_STRING);
-        log.info("Tao la token: " + token);
         if (token != null) {
             String username = Jwts.parser().setSigningKey(SECRET)
                     .parseClaimsJws(token.replace(TOKEN_PREFIX + " ", ""))
