@@ -16,6 +16,61 @@
       <GradleProjectSettings>
         <option name="createEmptyContentRootDirectories" value="true" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringBootRESTBasicAuthentication" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/SpringBootRESTBasicAuthentication" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringBootRestBasicAuthentication" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/SpringBootRestBasicAuthentication" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringBootRestJpaAuthenticaion" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/SpringBootRestJpaAuthenticaion" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringBootRestJpaBasicAuthenticaion" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/SpringBootRestJpaBasicAuthenticaion" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringBootSecurityJPA" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/SpringBootSecurityJPA" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/springbootsocial" />
         <option name="modules">
           <set>

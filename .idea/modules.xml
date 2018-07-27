@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sbrestbasicauth.iml" filepath="$PROJECT_DIR$/.idea/modules/sbrestbasicauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-boot-rest-jpa-basic-auth.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-boot-rest-jpa-basic-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-boot-rest-jpa-basic-auth_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-boot-rest-jpa-basic-auth_main.iml" group="spring-boot-rest-jpa-basic-auth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-boot-rest-jpa-basic-auth_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-boot-rest-jpa-basic-auth_test.iml" group="spring-boot-rest-jpa-basic-auth" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springbootjpa.iml" filepath="$PROJECT_DIR$/.idea/modules/springbootjpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springbootjpa_main.iml" filepath="$PROJECT_DIR$/.idea/modules/springbootjpa_main.iml" group="springbootjpa" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springbootjpa_test.iml" filepath="$PROJECT_DIR$/.idea/modules/springbootjpa_test.iml" group="springbootjpa" />

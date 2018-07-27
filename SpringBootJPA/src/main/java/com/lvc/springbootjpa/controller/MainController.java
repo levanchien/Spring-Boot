@@ -17,7 +17,7 @@ public class MainController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
-    private static final String[] NAMES = new String[] { "Tom", "Jerry", "Donald" };
+    private static final String[] NAMES = new String[]{"Tom", "Jerry", "Donald"};
 
     @ResponseBody
     @RequestMapping("/")

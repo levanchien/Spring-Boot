@@ -10,6 +10,16 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="sbrestbasicauth_main" target="1.8" />
+      <module name="sbrestbasicauth_test" target="1.8" />
+      <module name="sbrestjpabasicauth_main" target="1.8" />
+      <module name="sbrestjpabasicauth_test" target="1.8" />
+      <module name="sbsecurityjpa_main" target="1.8" />
+      <module name="sbsecurityjpa_test" target="1.8" />
+      <module name="Spring Boot-sbrestbasicauth_main" target="1.8" />
+      <module name="Spring Boot-sbrestbasicauth_test" target="1.8" />
+      <module name="spring-boot-rest-jpa-basic-auth_main" target="1.8" />
+      <module name="spring-boot-rest-jpa-basic-auth_test" target="1.8" />
       <module name="springbootjpa_main" target="1.8" />
       <module name="springbootjpa_test" target="1.8" />
       <module name="springbootsocial" target="1.8" />
